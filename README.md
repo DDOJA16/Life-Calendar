@@ -1,10 +1,3 @@
-- 👋 Hi, I’m @DDOJA16
-- 👀 I’m interested in ...
-- 🌱 I’m currently learning ...
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ...
-
-<!---
-DDOJA16/DDOJA16 is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-You can click the Preview link to take a look at your changes.
---->
+추가 예정
+- pagenation 구현
+- Layout - 왼쪽 레이아웃 퍼블리싱
