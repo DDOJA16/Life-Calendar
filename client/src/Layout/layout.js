@@ -2,47 +2,34 @@ import React from 'react'
 import styled from 'styled-components';
 import "../font/font.css"
 import { Link } from 'react-router-dom';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faCalendar } from "@fortawesome/free-regular-svg-icons"
-import { faListCheck, faBook } from "@fortawesome/free-solid-svg-icons"
+import Sidebar from './sideBar';
 
 const Layout = ({ children }) => {
     return(
-    <> 
-        <ALL>
-            <Lcontainer>
-                <Link to="/">
-                    <img alt='logoimg' src= './img/Life Calander_logo.png'/>
-                    <p>Life</p>
-                    <p>Calendar</p>
-                </Link>
+        <> 
+            <ALL>
+                <Lcontainer>
+                    <Link to="/">
+                        <img alt='logoimg' src= './img/Life Calander_logo.png'/>
+                        <p>Life</p>
+                        <p>Calendar</p>
+                    </Link>
 
-                <UserName>
-                    <p>DDOJA 님</p>
-                    <p>로그아웃</p>
-                </UserName>
+                    <UserName>
+                        <p>DDOJA 님</p>
+                        <p>로그아웃</p>
+                    </UserName>
 
-                <NavWrap>
-                    <div className='iconBox'>
-                        <FontAwesomeIcon className='icon icon1' icon={faCalendar}/>
-                        <p>claendar</p>
-                    </div>
-                    <div className='iconBox'>
-                        <FontAwesomeIcon className='icon' icon={faListCheck}/>
-                        <p>checklist</p>
-                    </div>
-                    <div className='iconBox'>
-                        <FontAwesomeIcon className='icon icon3' icon={faBook}/>
-                        <p>diarybook</p>
-                    </div>
-                </NavWrap>
-            </Lcontainer>
+                    <NavWrap>
+                        <Sidebar/>
+                    </NavWrap>
+                </Lcontainer>
 
-            <Rcontainer>
-                <div className="content"> {children} </div>
-            </Rcontainer>
-        </ALL>
-    </>
+                <Rcontainer>
+                    <div className="content"> {children} </div>
+                </Rcontainer>
+            </ALL>
+        </>
     )
 }
 export default Layout;
@@ -96,36 +83,6 @@ const NavWrap = styled.div`
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-    & .iconBox {
-        width: 100%;
-        height: 50px;
-        border-radius: 10px;
-        display: flex;
-        align-items: center;
-        border: 2px solid #545454;
-        font-size: 14px;
-        gap: 15px;
-
-        & .icon {
-            margin-left: 30px;
-        }
-        
-        & .icon, .icon p {
-            width: 30px;
-            height: 30px;
-            color: #545454;
-        }
-
-        & .icon1, .icon1 + p {
-        }
-
-        & .icon3, .icon3 + p {
-        }
-    }
 `
 
 const Rcontainer = styled.div`
